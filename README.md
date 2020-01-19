@@ -1,35 +1,16 @@
-[![GitHub stars](https://img.shields.io/github/stars/surmon-china/vue-awesome-swiper.svg?style=flat-square)](https://github.com/surmon-china/vue-awesome-swiper/stargazers)
-[![Build Status](https://travis-ci.org/surmon-china/vue-awesome-swiper.svg?branch=master)](https://travis-ci.org/surmon-china/vue-awesome-swiper)
-[![GitHub issues](https://img.shields.io/github/issues/surmon-china/vue-awesome-swiper.svg?style=flat-square)](https://github.com/surmon-china/vue-awesome-swiper/issues)
-[![GitHub forks](https://img.shields.io/github/forks/surmon-china/vue-awesome-swiper.svg?style=flat-square)](https://github.com/surmon-china/vue-awesome-swiper/network)
-[![GitHub last commit](https://img.shields.io/github/last-commit/google/skia.svg?style=flat-square)](https://github.com/surmon-china/vue-awesome-swiper)
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg?style=flat-square)](https://github.com/surmon-china/vue-awesome-swiper)
-[![Twitter](https://img.shields.io/twitter/url/https/github.com/surmon-china/vue-awesome-swiper.svg?style=flat-square)](https://twitter.com/intent/tweet?url=https://github.com/surmon-china/vue-awesome-swiper)
-[![](https://badge.juejin.im/entry/57f6a5e7d2030900689c1e9c/likes.svg?style=flat-square)](https://juejin.im/entry/57f6a5e7d2030900689c1e9c/detail)
+# V-Swiperjs
+[Swiper 5](http://www.swiper.com.cn) component for Vue, support pc and mobile, SPA and SSR. Based on [vue-awesome-swiper](https://github.com/surmon-china/vue-awesome-swiper)
 
-[![NPM](https://nodei.co/npm/vue-awesome-swiper.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/vue-awesome-swiper/)
-[![NPM](https://nodei.co/npm-dl/vue-awesome-swiper.png?months=9&height=3)](https://nodei.co/npm/vue-awesome-swiper/)
-
-
-# Vue-Awesome-Swiper
-[Swiper4](http://www.swiper.com.cn) component for Vue, support pc and mobile, SPA and SSR.
-
-If you need to roll back to Swiper3, use version [v2.6.7](https://github.com/surmon-china/vue-awesome-swiper/tree/v2.6.7).
-
-基于 [Swiper4](http://www.swiper.com.cn)、适用于 Vue 的轮播组件，支持服务端渲染和单页应用。
-
-如果需要回退到 Swiper3，请使用 [v2.6.7](https://github.com/surmon-china/vue-awesome-swiper/tree/v2.6.7) 版本。
+If you need to roll back to Swiper3, use version [v2.6.7](https://github.com/seferergun/v-swiperjs/tree/v2.6.7).
 
 
 # Example
 
-[Demo Page](https://surmon-china.github.io/vue-awesome-swiper)
-
 [CDN Example](https://jsfiddle.net/bL983fjt/)
 
-[mobile fullpage example code](https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/44-mobile-fullpage-example.vue)
+[mobile fullpage example code](https://github.com/seferergun/v-swiperjs/blob/master/examples/44-mobile-fullpage-example.vue)
 
-[nuxt.js/ssr example code](https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/nuxt-ssr-example)
+[nuxt.js/ssr example code](https://github.com/seferergun/v-swiperjs/blob/master/examples/nuxt-ssr-example)
 
 
 # Install
@@ -40,9 +21,9 @@ If you need to roll back to Swiper3, use version [v2.6.7](https://github.com/sur
 <link rel="stylesheet" href="path/to/swiper/dist/css/swiper.css"/>
 <script type="text/javascript" src="path/to/swiper.js"></script>
 <script type="text/javascript" src="path/to/vue.min.js"></script>
-<script type="text/javascript" src="path/to/dist/vue-awesome-swiper.js"></script>
+<script type="text/javascript" src="path/to/dist/v-swiperjs"></script>
 <script type="text/javascript">
-  Vue.use(window.VueAwesomeSwiper)
+  Vue.use(window.VueSwiper)
 </script>
 ```
 
@@ -58,12 +39,12 @@ npm install vue-awesome-swiper --save
 
 ``` javascript
 import Vue from 'vue'
-import VueAwesomeSwiper from 'vue-awesome-swiper'
+import VueSwiper from 'v-swiper.js'
 
 // require styles
 import 'swiper/dist/css/swiper.css'
 
-Vue.use(VueAwesomeSwiper, /* { default global options } */)
+Vue.use(VueSwiper, /* { default global options } */)
 ```
 
 #### mount with component
@@ -72,7 +53,7 @@ Vue.use(VueAwesomeSwiper, /* { default global options } */)
 // require styles
 import 'swiper/dist/css/swiper.css'
 
-import { swiper, swiperSlide } from 'vue-awesome-swiper'
+import { swiper, swiperSlide } from 'v-swiperjs'
 
 export default {
   components: {
@@ -87,8 +68,8 @@ export default {
 ```javascript
 // If used in nuxt.js/ssr, you should keep it only in browser build environment
 if (process.browser) {
-  const VueAwesomeSwiper = require('vue-awesome-swiper/dist/ssr')
-  Vue.use(VueAwesomeSwiper)
+  const VueSwiper = require('v-swiperjs/dist/ssr')
+  Vue.use(VueSwiper)
 }
 ```
 
@@ -112,7 +93,7 @@ Swiper.use({
 ```
 
 
-### Difference（使用方法的异同）
+### Difference
 
 **SSR and the only difference in the use of the SPA:**
 - SPA worked by the `component`, find swiper instance by `ref attribute`.
@@ -248,10 +229,6 @@ Swiper.use({
 
 
 # API
-Swiper's API and configuration can be used.（Swiper官网中的API及配置均可使用）
-- [CN Swiper4 documents](http://www.swiper.com.cn/api/index2.html)
+Swiper's API and configuration can be used.
 - [EN Swiper4 documents](http://idangero.us/swiper/api/)
 
-
-# Author
-[Surmon](https://surmon.me)

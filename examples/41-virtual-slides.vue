@@ -14,7 +14,7 @@
       </div>
       <md-button class="md-icon-button"
                  target="_blank"
-                 href="https://github.com/surmon-china/vue-awesome-swiper/blob/master/examples/41-virtual-slides.vue">
+                 href="https://github.com/seferergun/v-swiperjs/blob/master/examples/41-virtual-slides.vue">
         <md-icon>code</md-icon>
       </md-button>
     </md-card-actions>

@@ -1,5 +1,5 @@
 
 import Vue from 'vue'
-import VueAwesomeSwiper from 'vue-awesome-swiper/dist/ssr'
+import VueSwiper from 'v-swiperjs/dist/ssr'
 
-Vue.use(VueAwesomeSwiper)
+Vue.use(VueSwiper)

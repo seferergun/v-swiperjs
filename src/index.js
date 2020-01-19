@@ -20,7 +20,7 @@ const install = function (Vue, globalOptions) {
   Vue.component(SwiperComponent.name, SwiperComponent)
   Vue.component(SlideComponent.name, SlideComponent)
 }
-const VueAwesomeSwiper = { Swiper, swiper, swiperSlide, install }
+const VueSwiper = { Swiper, swiper, swiperSlide, install }
 
-export default VueAwesomeSwiper
+export default VueSwiper
 export { Swiper, swiper, swiperSlide, install }
