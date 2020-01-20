@@ -84,6 +84,66 @@
         type: Object,
         required: false,
         default: () => ({})
+      },
+      initialSlide: {
+        type: Number,
+        required: false,
+        default: null
+      },
+      direction: {
+        type: String,
+        required: false,
+        default: null
+      },
+      speed: {
+        type: Number,
+        required: false,
+        default: null
+      },
+      width: {
+        type: Number,
+        required: false,
+        default: null
+      },
+      height: {
+        type: Number,
+        required: false,
+        default: null,
+      },
+      autoHeight: {
+        type: Boolean,
+        required: false,
+        default: null
+      },
+      spaceBetween: {
+        type: Number,
+        required: false,
+        default: null
+      },
+      autoplay: {
+        type: [Boolean, Object],
+        required: false,
+        default: null
+      },
+      slidesPerColumn: {
+        type: Number,
+        required: false,
+        default: false
+      },
+      speed: {
+        type: Number,
+        required: false,
+        default: null
+      },
+      loop: {
+        type: Boolean,
+        required: false,
+        default: null
+      },
+      breakpoints: {
+        type: Object,
+        required: false,
+        default: null
       }
     },
     data() {
@@ -137,7 +197,22 @@
         }
       },
       mountInstance() {
-        const swiperOptions = Object.assign({}, this.globalOptions, this.options)
+        const customOptions = {
+          initialSlide: this.initialSlide,
+          direction: this.direction,
+          speed: this.speed,
+          width: this.width,
+          height: this.height,
+          autoHeight: this.autoHeight,
+          spaceBetween: this.spaceBetween,
+          autoplay: this.autoplay,
+          slidesPerColumn: this.slidesPerColumn,
+          speed: this.speed,
+          loop: this.loop,
+          breakpoints: this.breakpoints
+        };
+        const swiperOptions = Object.assign({}, this.globalOptions, this.options, customOptions)
+
         this.swiper = new Swiper(this.$el, swiperOptions)
         this.bindEvents()
         this.$emit('ready', this.swiper)
