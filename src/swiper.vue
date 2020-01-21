@@ -95,11 +95,6 @@
         required: false,
         default: null
       },
-      speed: {
-        type: Number,
-        required: false,
-        default: null
-      },
       width: {
         type: Number,
         required: false,
@@ -200,7 +195,6 @@
         const customOptions = {
           initialSlide: this.initialSlide,
           direction: this.direction,
-          speed: this.speed,
           width: this.width,
           height: this.height,
           autoHeight: this.autoHeight,
