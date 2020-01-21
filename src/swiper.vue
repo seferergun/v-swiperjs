@@ -88,57 +88,62 @@
       initialSlide: {
         type: Number,
         required: false,
-        default: undefined
+        default: null
       },
       direction: {
         type: String,
         required: false,
-        default: undefined
+        default: null
       },
       width: {
         type: Number,
         required: false,
-        default: undefined
+        default: null
       },
       height: {
         type: Number,
         required: false,
-        default: undefined,
+        default: null,
       },
       autoHeight: {
         type: Boolean,
         required: false,
-        default: undefined
+        default: null
       },
       spaceBetween: {
         type: Number,
         required: false,
-        default: undefined
+        default: null
       },
       autoplay: {
         type: [Boolean, Object],
         required: false,
-        default: undefined
+        default: null
       },
       slidesPerColumn: {
         type: Number,
         required: false,
-        default: undefined
+        default: null
+      },
+      slidesPerView: {
+        type: Number,
+        required: false,
+        default: null
       },
       speed: {
         type: Number,
         required: false,
-        default: undefined
+        default: null
       },
       loop: {
         type: Boolean,
         required: false,
-        default: undefined
+        default: null
       },
       breakpoints: {
         type: Object,
         required: false,
-        default: undefined
+        default: null
       }
     },
     data() {
@@ -201,10 +206,12 @@
           spaceBetween: this.spaceBetween,
           autoplay: this.autoplay,
           slidesPerColumn: this.slidesPerColumn,
+          slidesPerView: this.slidesPerView,
           speed: this.speed,
           loop: this.loop,
           breakpoints: this.breakpoints
         };
+        Object.keys(customOptions).forEach(key => customOptions[key] == null && delete customOptions[key])
         const swiperOptions = Object.assign({}, this.globalOptions, customOptions, this.options)
         this.swiper = new Swiper(this.$el, swiperOptions)
         this.bindEvents()
