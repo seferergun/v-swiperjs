@@ -1,6 +1,6 @@
 
 import Vue from 'vue/dist/vue.js'
-import Swiper from 'swiper/dist/js/swiper.js'
+import Swiper from 'swiper/js/swiper.js'
 import VueSwiperSSR from '../../../src/ssr.js'
 import VueSwiper, { swiper, swiperSlide, install } from '../../../src/index.js'
 

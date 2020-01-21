@@ -13,7 +13,7 @@
 
 <script>
   // require sources
-  import _Swiper from 'swiper/dist/js/swiper.js'
+  import _Swiper from 'swiper'
   const Swiper = window.Swiper || _Swiper
 
   // pollfill
@@ -88,57 +88,57 @@
       initialSlide: {
         type: Number,
         required: false,
-        default: null
+        default: undefined
       },
       direction: {
         type: String,
         required: false,
-        default: null
+        default: undefined
       },
       width: {
         type: Number,
         required: false,
-        default: null
+        default: undefined
       },
       height: {
         type: Number,
         required: false,
-        default: null,
+        default: undefined,
       },
       autoHeight: {
         type: Boolean,
         required: false,
-        default: null
+        default: undefined
       },
       spaceBetween: {
         type: Number,
         required: false,
-        default: null
+        default: undefined
       },
       autoplay: {
         type: [Boolean, Object],
         required: false,
-        default: null
+        default: undefined
       },
       slidesPerColumn: {
         type: Number,
         required: false,
-        default: false
+        default: undefined
       },
       speed: {
         type: Number,
         required: false,
-        default: null
+        default: undefined
       },
       loop: {
         type: Boolean,
         required: false,
-        default: null
+        default: undefined
       },
       breakpoints: {
         type: Object,
         required: false,
-        default: null
+        default: undefined
       }
     },
     data() {
@@ -205,8 +205,7 @@
           loop: this.loop,
           breakpoints: this.breakpoints
         };
-        const swiperOptions = Object.assign({}, this.globalOptions, this.options, customOptions)
-
+        const swiperOptions = Object.assign({}, this.globalOptions, customOptions, this.options)
         this.swiper = new Swiper(this.$el, swiperOptions)
         this.bindEvents()
         this.$emit('ready', this.swiper)

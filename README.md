@@ -18,7 +18,7 @@ If you need to roll back to Swiper3, use version [v2.6.7](https://github.com/sef
 #### CDN
 
 ``` html
-<link rel="stylesheet" href="path/to/swiper/dist/css/swiper.css"/>
+<link rel="stylesheet" href="path/to/swiper/css/swiper.css"/>
 <script type="text/javascript" src="path/to/swiper.js"></script>
 <script type="text/javascript" src="path/to/vue.min.js"></script>
 <script type="text/javascript" src="path/to/dist/v-swiperjs"></script>
@@ -42,7 +42,7 @@ import Vue from 'vue'
 import VueSwiper from 'v-swiper.js'
 
 // require styles
-import 'swiper/dist/css/swiper.css'
+import 'swiper/css/swiper.css'
 
 Vue.use(VueSwiper, /* { default global options } */)
 ```
@@ -51,7 +51,7 @@ Vue.use(VueSwiper, /* { default global options } */)
 
 ```javascript
 // require styles
-import 'swiper/dist/css/swiper.css'
+import 'swiper/css/swiper.css'
 
 import { swiper, swiperSlide } from 'v-swiperjs'
 
